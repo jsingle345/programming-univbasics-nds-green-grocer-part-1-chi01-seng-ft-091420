@@ -11,11 +11,11 @@ end
 
 
 def consolidate_cart(cart)
-  count = 1
   cart_combined = []
   cart.each do |item_info|
     item_info[:count] = 1
-    if !cart_combined.include? item_info
+    food_name = find_item_by_name_in_collection(item_info[:item], cart_combined)
+    if !food_name 
       cart_combined.push(item_info)
     else
       for i in cart_combined
