@@ -24,8 +24,10 @@ def consolidate_cart(cart)
         end
       end
     end
+    end
   return cart_combined
 end
+
 
  # Consult README for inputs and outputs
   #
