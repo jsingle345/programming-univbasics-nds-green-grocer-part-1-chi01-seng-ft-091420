@@ -19,12 +19,14 @@ def consolidate_cart(cart)
       cart_combined.push(item_info)
     else
       for i in cart_combined
-        i[:count] += 1
+        if i[:item] == item_info[:item]
+          i[:count] += 1
+        end
       end
     end
-  end
   return cart_combined
 end
+
  # Consult README for inputs and outputs
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
